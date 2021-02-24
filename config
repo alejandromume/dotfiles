@@ -221,7 +221,8 @@ gaps inner 10
 
 for_window [class="^.*"] border pixel 3
 
-bindsym $mod+Shift+x exec dmenu_run
+bindsym $mod+Shift+s exec dmenu_run
+bindsym $mod+Shift+x exec sharenix-section -q
 #bindsym $mod+Shift+s exec rofi -show run
 exec_always feh --bg-scale /home/alejandromume/Imágenes/2906429.jpg
 

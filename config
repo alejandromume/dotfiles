@@ -200,12 +200,12 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 bar {
 	status_command ~/.config/bumblebee-status/bumblebee-status -t gruvbox-powerline -m battery cpu spotify datetime
 	colors {
-    		background #2f343f
+    		background #282828
     		#statusline #2f343f
     		#separator #4b5262
 
     # colour of border, background, and text
-    		focused_workspace   #2f343f #b16286 #d8dee8
+    		focused_workspace   #2f343f #d65d0e #d8dee8
     		active_workspace    #2f343f #2f343f #d8dee8
     		inactive_workspace  #2f343f #2f343f #d8dee8
     		urgent_workspace    #2f343f #ebcb8b #2f343f
@@ -223,6 +223,6 @@ for_window [class="^.*"] border pixel 3
 bindsym $mod+Shift+s exec dmenu_run
 bindsym $mod+Shift+x exec sharenix-section -q
 #bindsym $mod+Shift+s exec rofi -show run
-exec_always feh --bg-scale /home/alejandromume/Imágenes/2906429.jpg
+exec_always feh --bg-scale /home/alejandromume/Imágenes/2906429.png
 exec_always picom -b
 exec_always xrandr --output VGA-1 --primary --mode 1600x900 --pos 0x0 --rotate normal

@@ -18,7 +18,7 @@ set $mod Mod1
 
 #font pango:monospace 8
 #font pango:SF Mono Regular Nerd Font Complete 13
-font pango:MesloLGS NF Regular  12
+font pango:MesloLGS NF Regular  15
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -219,7 +219,6 @@ gaps outer 14
 gaps inner 10
 
 for_window [class="^.*"] border pixel 3
-
 bindsym $mod+Shift+s exec dmenu_run
 bindsym $mod+Shift+x exec sharenix-section -q
 #bindsym $mod+Shift+s exec rofi -show run

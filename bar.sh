@@ -1,4 +1,4 @@
-echo " $(date)"
+echo " : $(date)"
 
 while :
 do

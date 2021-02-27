@@ -17,8 +17,8 @@ set $mod Mod1
 
 
 #font pango:monospace 8
-font pango:SF Mono Regular Nerd Font Complete 10
-
+#font pango:SF Mono Regular Nerd Font Complete 13
+font pango:MesloLGS NF Regular  12
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -111,16 +111,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  | Coding"
-set $ws2 "2:  | Firefox"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws1 "1 |  "
+set $ws2 "2 |  "
+set $ws3 "3 |  "
+set $ws4 "4 |  "
+set $ws5 "5 |  "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10:  | Musica"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -198,22 +198,21 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	
+	status_command ~/.config/bumblebee-status/bumblebee-status -t gruvbox-powerline -m battery cpu spotify datetime
 	colors {
     		background #2f343f
-    		statusline #2f343f
-    		separator #4b5262
+    		#statusline #2f343f
+    		#separator #4b5262
 
     # colour of border, background, and text
-    		focused_workspace   #2f343f #bf616a #d8dee8
+    		focused_workspace   #2f343f #b16286 #d8dee8
     		active_workspace    #2f343f #2f343f #d8dee8
     		inactive_workspace  #2f343f #2f343f #d8dee8
     		urgent_workspace    #2f343f #ebcb8b #2f343f
     		}
 
-        status_command i3blocks
 	position top
-
+	
 }
 
 gaps outer 14
@@ -225,5 +224,5 @@ bindsym $mod+Shift+s exec dmenu_run
 bindsym $mod+Shift+x exec sharenix-section -q
 #bindsym $mod+Shift+s exec rofi -show run
 exec_always feh --bg-scale /home/alejandromume/Imágenes/2906429.jpg
-
+exec_always picom -b
 exec_always xrandr --output VGA-1 --primary --mode 1600x900 --pos 0x0 --rotate normal
